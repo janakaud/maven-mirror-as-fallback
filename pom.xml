@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tuna</groupId>
+    <artifactId>maven-mirror-as-fallback</artifactId>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.codehaus.plexus</groupId>
+            <artifactId>plexus-component-annotations</artifactId>
+            <version>${plexus.version}</version>
+            <scope>system</scope>
+            <systemPath>${mvn.lib}/plexus-component-annotations-${plexus.version}.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-core</artifactId>
+            <version>${mvn.version}</version>
+            <scope>system</scope>
+            <systemPath>${mvn.lib}/maven-core-${mvn.version}.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-artifact</artifactId>
+            <version>${mvn.version}</version>
+            <scope>system</scope>
+            <systemPath>${mvn.lib}/maven-artifact-${mvn.version}.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-settings</artifactId>
+            <version>${mvn.version}</version>
+            <scope>system</scope>
+            <systemPath>${mvn.lib}/maven-settings-${mvn.version}.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.resolver</groupId>
+            <artifactId>maven-resolver-api</artifactId>
+            <version>${mvn.resolver.version}</version>
+            <scope>system</scope>
+            <systemPath>${mvn.lib}/maven-resolver-api-${mvn.resolver.version}.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <mvn.lib>${maven.home}/lib</mvn.lib>
+        <mvn.version>3.6.1</mvn.version>
+        <mvn.resolver.version>1.3.3</mvn.resolver.version>
+        <plexus.version>1.7.1</plexus.version>
+    </properties>
+</project>
