@@ -5,7 +5,7 @@
 
     <groupId>com.tuna</groupId>
     <artifactId>maven-mirror-with-fallback</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
 
     <dependencies>
